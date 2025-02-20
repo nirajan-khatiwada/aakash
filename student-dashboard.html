@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - LibraryMS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-book-reader"></i>
+            <span>LibraryMS</span>
+        </div>
+        <div class="user-info">
+            <span id="userName"></span>
+            <button onclick="logout()" class="btn btn-logout">Logout</button>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <div class="dashboard-stats">
+            <div class="stat-card">
+                <h3>Books Borrowed</h3>
+                <p id="borrowedBooks">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Books Due Soon</h3>
+                <p id="dueSoonBooks">0</p>
+            </div>
+        </div>
+
+        <div class="borrowed-books-section">
+            <h2>My Borrowed Books</h2>
+            <table id="borrowedBooksTable">
+                <thead>
+                    <tr>
+                        <th>Book Title</th>
+                        <th>Author</th>
+                        <th>Borrowed Date</th>
+                        <th>Due Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="borrowedBooksTableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/student-dashboard.js"></script>
+</body>
+</html>
