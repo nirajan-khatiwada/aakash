@@ -9,7 +9,7 @@ function closeBookForm() {
 }
 
 function closeStudentModal() {
-    document.getElementById('studentSelectModal').classList.remove('show');
+    document.getElementById('studentSelectModal').style.display = 'none';
     window.selectedStudentId = null;
     window.selectedBookId = null;
 }
